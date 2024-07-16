@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+  
+.upper_nav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    background-color: #fff;
+}
+
+/* Logo */
+.logo_png{
+    width: 15vw;
+    margin: .8vw;
+    padding-left: .8vw;
+    padding-right: .8vw;
+    margin-left: 2vw;
+    animation-name: logo_pg;
+    animation-duration: 1s;
+    animation-delay: .2s;
+    border-radius: 4px;
+    overflow-y: hidden;
+
+}
+@keyframes logo_pg {
+    0% {height: 6vw;margin-left: 0; }
+    
+    100% {height: 7vw; }
+}
+
+/* short_btn */
+.shortcuts{
+    position: absolute;
+    float: right;
+    right: 0%;
+    margin: .8vw;
+    margin-right: 2vw;
+    animation-name: shortcutAni;
+    animation-duration: 1s;
+    animation-delay: .2s;
+}
+@keyframes shortcutAni {
+    0% {margin-right: 0;}
+}
+
+
+.short_btn {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 42px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 12px;
+  padding-right: 12px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 12px;
+  margin: .5vw;
+}
+
+.short_btn:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.short_btn:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(112, 79, 184, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.short_btn:active, .logo_png:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.shortcuts .icon {
+    display: none; /* Hide the icon by default */
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+    .shortcuts .short_btn {
+        display: none; /* Hide all links by default */
+    }
+
+    .shortcuts .icon {
+        display: block; /* Show the icon */
+        position: absolute;
+        right: 0px; /* Adjust position to make it visible */
+        top: 0px;
+        font-size: 16px; /* Increase font size for better visibility */
+        color: #333; /* Change color to white for contrast */
+        cursor: pointer; /* Pointer cursor for better UX */
+        
+    }
+
+    
+    .shortcuts.responsive .short_btn {
+        float: none;
+        display: block;
+        text-align: left;
+        right: 30px;
+        padding: 0%;
+        font-size: x-small;
+        display: flex;
+        justify-items:center;
+        align-items: center;
+        text-align: center;
+    }
+    .shortcuts.responsive {
+        display: flex;
+        flex-direction: column;
+        position: fixed; 
+        right: 10px; 
+        top: 32px; 
+        background-color: transparent; 
+        padding: 10px 0; 
+        z-index: 1000; 
+        width: auto; 
+        transition: 1s
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    .shortcuts .short_btn {
+        font-size: 15px; /* Smaller font size for smaller screens */
+    }
+}
+
+

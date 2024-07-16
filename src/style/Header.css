@@ -1,0 +1,82 @@
+*{
+    padding:0%;
+    margin: 0%;
+    border: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.intro{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    
+}
+.intro_head{
+    margin-left: 4vw;
+    margin-bottom: 1.5vw;
+    display: flex;
+    font-size:3vw;
+}
+.hii{
+    margin-left: 6px;
+    height: 3vw;
+}
+.hii:hover{
+    transform: rotate(80deg);
+    transition: .5s;
+}
+.intro_para{
+    margin-bottom: 1.5vw;
+    padding: 1vw;
+    font-size:x-large;
+    color: #4b4b4b;
+    
+}
+.intro_all{
+    margin-left: 6vw;
+}
+.head1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 13vw;
+}
+.social_media{
+    filter: grayscale(100);
+}
+.media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.anime1{
+    height: 35vw;
+}
+.pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .head1 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .intro_para{
+        display: flex;
+        justify-content: center;
+        align-items:center ;
+        margin: 8vw;
+        margin-top: 6vw;
+    }
+    .intro_head{
+        margin-left:10vw;
+        margin-top: 5vw;
+        padding: 2vw;
+        font-size: 4vw;
+    }
+
+    .intro, .pic {
+        min-width: 100%;
+    }
+}
